@@ -1,0 +1,28 @@
+databases:
+  - name: divideai-db
+    plan: free
+    databaseName: divideai
+    user: divideai
+
+services:
+  - type: web
+    name: divideai-api
+    runtime: python
+    plan: free
+    rootDir: divideai-backend
+    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate
+    startCommand: gunicorn divideai.wsgi:application
+    healthCheckPath: /api/docs/
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: divideai-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        value: .onrender.com
+      - key: PYTHON_VERSION
+        value: 3.12.4
