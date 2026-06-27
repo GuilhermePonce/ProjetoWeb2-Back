@@ -37,13 +37,21 @@ O backend do DivideAi fornece autenticacao JWT, CRUD de grupos, CRUD de despesas
 
 4. Rodar migrations:
    python manage.py migrate
-   
-5. Criar superusuario:
-   python manage.py createsuperuser
-   
-6. Rodar o servidor:
+
+5. Rodar o servidor:
    python manage.py runserver
-  
+
+## Usuarios de demonstracao
+
+| Usuario | E-mail | Senha |
+| --- | --- | --- |
+| `ana` | `ana@divideai.local` | `DivideAi123!` |
+| `bruno` | `bruno@divideai.local` | `DivideAi123!` |
+| `carla` | `carla@divideai.local` | `DivideAi123!` |
+
+Essas credenciais sao destinadas somente a testes locais. Se o comando for
+executado com `--password`, a senha indicada na tabela deixa de ser valida.
+
 ## Como usar
 
 Principais endpoints:
@@ -87,20 +95,9 @@ A tela Swagger permite consultar e testar a API.
 
 ## Deploy
 
-Sugestoes de hospedagem: Render, Railway, PythonAnywhere ou AWS.
 
-Passos gerais:
 
-1. Criar o servico Python no provedor escolhido.
-2. Configurar variaveis `SECRET_KEY`, `DEBUG=False`, `ALLOWED_HOSTS` e `CORS_ALLOWED_ORIGINS`.
-3. Instalar dependencias com `pip install -r requirements.txt`.
-4. Executar `python manage.py migrate`.
-5. Rodar com Gunicorn, por exemplo:
-   ```bash
-   gunicorn divideai.wsgi
-   ```
-
-Link do backend publicado: `INSERIR_LINK_DO_DEPLOY_BACKEND`
+Link do backend publicado: TODO
 
 ## O que foi desenvolvido
 
@@ -124,4 +121,3 @@ Link do backend publicado: `INSERIR_LINK_DO_DEPLOY_BACKEND`
 - Separacao de dados entre usuarios diferentes.
 - Calculo de saldo e settlements.
 - Documentacao Swagger.
-
