@@ -68,11 +68,6 @@ Principais endpoints:
 - `GET|PUT|PATCH|DELETE /api/expenses/{id}/` consulta, atualiza e exclui despesas.
 - `GET /api/groups/{id}/balances/` calcula totais pagos, valores devidos, saldo final e pagamentos sugeridos.
 
-Todos os endpoints principais exigem token no cabecalho:
-
-```txt
-Authorization: Bearer SEU_ACCESS_TOKEN
-```
 
 ## Documentacao Swagger
 
