@@ -21,24 +21,22 @@ O backend do DivideAi fornece autenticacao JWT, CRUD de grupos, CRUD de despesas
 ## Instalacao local
 
 1. Clonar o repositorio:
-   
-   git clone https://github.com/GuilhermePonce/ProjetoWeb2-Back
+
    cd divideai-backend
-
-
-2. Criar e ativar ambiente virtual:
+   
+3. Criar e ativar ambiente virtual:
 
    python -m venv .venv
    .venv\Scripts\activate
 
-3. Instalar dependencias:
+4. Instalar dependencias:
 
    pip install -r requirements.txt
 
-4. Rodar migrations:
+5. Rodar migrations:
    python manage.py migrate
 
-5. Rodar o servidor:
+6. Rodar o servidor:
    python manage.py runserver
 
 ## Usuarios de demonstracao
@@ -90,9 +88,7 @@ A tela Swagger permite consultar e testar a API.
 
 ## Deploy
 
-
-
-Link do backend publicado: TODO
+Link do backend publicado: https://divideai-api.onrender.com
 
 ## O que foi desenvolvido
 
